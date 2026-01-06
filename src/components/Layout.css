@@ -31,7 +31,6 @@ body {
     overflow: hidden;
 }
 
-/* Sidebar Styling */
 .sidebar {
     width: 280px;
     background: var(--sidebar-bg);
@@ -115,7 +114,6 @@ body {
     opacity: 1;
 }
 
-/* Main Content Area */
 .board {
     flex: 1;
     padding: 40px 60px;
@@ -150,7 +148,6 @@ body {
     font-size: 0.85rem;
 }
 
-/* Task Input Field */
 .task-creator input {
     width: 100%;
     padding: 18px 25px;
@@ -168,7 +165,6 @@ body {
     box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
 }
 
-/* Task Cards */
 .task-grid {
     display: flex;
     flex-direction: column;
@@ -229,4 +225,37 @@ body {
 .delete-task-btn:hover {
     background: var(--danger);
     color: white;
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+}
+
+.main-app-header {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px 0;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;         
+    justify-content: center; 
+    align-items: center;     
+}
+
+.main-app-header h1 {
+    margin: 0;
+    color: #000000;
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    justify-content: center;
+}
+
+.app-container {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
 }

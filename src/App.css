@@ -1,38 +1,112 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+:root {
+    --sidebar-bg: #0f172a;
+    --sidebar-hover: #1e293b;
+    --accent-color: #3b82f6;
+    --bg-main: #f8fafc;
+    --text-primary: #1e293b;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* { box-sizing: border-box; }
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-main);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.main-app-header {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px 0;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;         
+    justify-content: center; 
+    align-items: center;     
 }
 
-.App-link {
-  color: #61dafb;
+.main-app-header h1 {
+    margin: 0;
+    color: #000000;
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app-container {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 280px;
+    background: var(--sidebar-bg);
+    color: white;
+    padding: 30px 20px;
+    flex-shrink: 0;
+}
+
+.sidebar h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #94a3b8;
+}
+
+.emp-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.emp-list li {
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    transition: 0.2s;
+}
+
+.emp-list li:hover { background: var(--sidebar-hover); }
+.emp-list li.active { background: var(--accent-color); }
+
+.emp-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-group {
+    display: flex;
+    gap: 5px;
+}
+
+.btn-group button {
+    background: rgba(255,255,255,0.1);
+    border: none;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.btn-group button:hover { background: var(--accent-color); }
+
+.board {
+    flex: 1;
+    padding: 40px;
+    background: var(--bg-main);
+    overflow-y: auto;
 }
