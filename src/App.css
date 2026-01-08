@@ -110,3 +110,54 @@ body, html {
     background: var(--bg-main);
     overflow-y: auto;
 }
+
+.task-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Edit Button */
+.edit-icon-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background-color: #e8f0ff;
+  color: #2563eb;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.edit-icon-btn:hover {
+  background-color: #2563eb;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Delete Button */
+.delete-task-btn {
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: none;
+  background-color: #fee2e2;
+  color: #dc2626;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.delete-task-btn:hover {
+  background-color: #dc2626;
+  color: #fff;
+}
+
+/* Optional: focus accessibility */
+.edit-icon-btn:focus,
+.delete-task-btn:focus {
+  outline: 2px solid rgba(37, 99, 238, 0.4);
+}
