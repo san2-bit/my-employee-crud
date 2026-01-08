@@ -62,15 +62,26 @@ return (
             </div>
             
             <div className="task-actions">
-                <button 
-                className="edit-icon-btn" 
-                onClick={() => { setEditingTaskId(task.id); setEditValue(task.text); }}>
-                ✎
-                </button>
-                <button className="delete-task-btn" onClick={() => onDelete(task.id)}>
-                Delete
-                </button>
-            </div>
+  <button
+    className="edit-icon-btn"
+    title="Edit task"
+    onClick={() => {
+      setEditingTaskId(task.id);
+      setEditValue(task.text);
+    }}
+  >
+    ✎
+  </button>
+
+  <button
+    className="delete-task-btn"
+    title="Delete task"
+    onClick={() => onDelete(task.id)}
+  >
+    Delete
+  </button>
+</div>
+
         </div>
         ))}
     </div>
